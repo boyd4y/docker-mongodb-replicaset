@@ -43,7 +43,7 @@ addToReplica(){
 
 #start mongod process
 echo Starting mongod process...
-mongod --fork --logpath $LOG_FILE --replSet $REPLICA_NAME
+mongod --fork --logpath $LOG_FILE --replSet $REPLICA_NAME --smallfiles
 echo 'waiting for child process to start...'
 sleep 5
 #create temporary file for managing container list
